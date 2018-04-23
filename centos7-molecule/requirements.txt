@@ -1,0 +1,6 @@
+virtualenv
+ansible>=2.5.1
+ansible-lint==3.4.19
+molecule==2.12.1
+testinfra==1.7.1
+docker-py
