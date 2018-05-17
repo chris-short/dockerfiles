@@ -1,5 +1,0 @@
-0.0.0.0:8000
-tls off
-
-root /kafka-topics-ui
-log stdout
