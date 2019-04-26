@@ -1,10 +1,11 @@
-FROM registry.access.redhat.com/rhel7-atomic:latest
+FROM alpine:latest
 
 LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN set -x \
-        && yum update \
-        && yum upgrade \
-        && yum install git s3cmd ca-certificates
+        && apk update \
+        && apk upgrade \
+        && apk add --no-cache ca-certificates py-pip \
+        && pip install s3cmd
 
 ENTRYPOINT [ "s3cmd" ]
