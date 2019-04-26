@@ -8,4 +8,7 @@ RUN set -x \
         && apk add --no-cache ca-certificates py-pip \
         && pip install s3cmd
 
+ENV HOME /root
+WORKDIR $HOME/s3cmd-workspace
+
 ENTRYPOINT [ "s3cmd" ]
