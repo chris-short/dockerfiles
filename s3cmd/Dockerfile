@@ -1,5 +1,4 @@
 FROM alpine:latest
-
 LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN set -x \
