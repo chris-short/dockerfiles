@@ -8,6 +8,6 @@ RUN set -x \
         && pip install s3cmd
 
 ENV HOME /root
-WORKDIR $HOME/s3cmd-workspace
+WORKDIR $HOME
 
 ENTRYPOINT [ "s3cmd" ]
