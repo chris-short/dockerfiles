@@ -6,5 +6,3 @@ RUN set -x \
         && apk upgrade \
         && apk add --no-cache ca-certificates py-pip \
         && pip install s3cmd
-
-ENTRYPOINT [ "s3cmd" ]
