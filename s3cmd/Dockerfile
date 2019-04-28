@@ -5,4 +5,4 @@ RUN set -x \
         && apk update \
         && apk upgrade \
         && apk add --no-cache ca-certificates py-pip \
-        && pip install s3cmd
+        && pip install s3cmd python-magic
