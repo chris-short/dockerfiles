@@ -5,4 +5,6 @@ RUN set -x \
         && apk update \
         && apk upgrade \
         && apk add --no-cache ca-certificates py-pip \
-        && pip install s3cmd python-magic
+        && pip install --no-cache-dir s4cmd
+
+ENTRYPOINT [ "s4cmd" ]

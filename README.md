@@ -24,3 +24,17 @@ Percona Toolkit containerized
 ## netlify-hook
 
 Similar to curltainer but URL only
+
+## s3cmd
+
+[![Docker Repository on Quay](https://quay.io/repository/chrisshort/s3cmd/status "Docker Repository on Quay")](https://quay.io/repository/chrisshort/s3cmd)
+
+Alpine container with s3cmd installed via pip for use with ant S3 compliant API (including [Digital Ocean Spaces](https://www.digitalocean.com/docs/spaces/resources/s3cmd/))
+
+## s4cmd
+
+[![Docker Repository on Quay](https://quay.io/repository/chrisshort/s4cmd/status "Docker Repository on Quay")](https://quay.io/repository/chrisshort/s4cmd)
+
+Alpine container with [s4cmd](https://github.com/bloomreach/s4cmd) installed via pip for use with ant S3 compliant API (including [Digital Ocean Spaces](https://www.digitalocean.com/docs/spaces/resources/s3cmd/)).
+
+A faster version of s3cmd
