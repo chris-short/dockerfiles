@@ -27,6 +27,7 @@ RUN curl -LO https://github.com/openshift/ocp-release-operator-sdk/blob/master/l
 RUN mkdir -p /etc/ansible \
   && echo "localhost ansible_connection=local" > /etc/ansible/hosts \
   && echo '[defaults]' > /etc/ansible/ansible.cfg \
+  && echo 'ansible_python_interpreter = /usr/libexec/platform-python \
   && echo 'roles_path = /opt/ansible/roles' >> /etc/ansible/ansible.cfg \
   && echo 'library = /usr/share/ansible/openshift' >> /etc/ansible/ansible.cfg
 
