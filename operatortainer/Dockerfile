@@ -25,10 +25,10 @@ RUN curl -LO https://github.com/openshift/ocp-release-operator-sdk/blob/master/l
 
 # Create the basic ansible.cfg
 RUN mkdir -p /etc/ansible \
- && printf 'localhost ansible_connection=local\n\
-[defaults]\n\
+ && printf '[defaults]\n\
 roles_path = /opt/ansible/roles\n\
 library = /usr/share/ansible/openshift\n'\
+localhost ansible_connection=local\n\
 > /etc/ansible/ansible.cfg
 
 # Ensure directory permissions are properly set
