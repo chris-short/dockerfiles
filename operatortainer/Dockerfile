@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi7/ubi
+FROM registry.access.redhat.com/ubi8/ubi
 
 ENV OPERATOR=/usr/local/bin/ansible-operator \
     USER_UID=1001 \
@@ -6,11 +6,10 @@ ENV OPERATOR=/usr/local/bin/ansible-operator \
     HOME=/opt/ansible
 
 # Install python dependencies
-RUN yum install -y python-devel inotify-tools gcc \
- && easy_install pip \
- && pip install --no-cache-dir --upgrade setuptools \
- && pip install --no-cache-dir ansible ansible-runner openshift ansible-runner-http idna==2.7 \
- && yum remove -y python-devel gcc \
+RUN yum install -y platform-python-devel python3-inotify gcc python3-pip \
+ && pip3 install --no-cache-dir --upgrade setuptools \
+ && pip3 install --no-cache-dir ansible ansible-runner openshift ansible-runner-http idna==2.7 \
+ && yum remove -y platform-python-devel gcc \
  && yum clean all \
  && rm -rf /var/cache/yum
 
