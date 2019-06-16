@@ -3,7 +3,6 @@ LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN set -x \
       && microdnf update \
-      && microdnf upgrade \
       && microdnf install --no-cache ca-certificates curl
 
 RUN set -x \
