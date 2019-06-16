@@ -8,7 +8,7 @@ RUN set -x \
       && rm -rf /var/cache/yum
 
 RUN set -x \
-      && curl -o ossutil http://gosspublic.alicdn.com/ossutil/1.6.1/ossutil64 \
-      && chmod 0755 ossutil
+      && curl -o /usr/local/bin/ossutil http://gosspublic.alicdn.com/ossutil/1.6.1/ossutil64 \
+      && chmod 0755 /usr/local/bin/ossutil
 
-ENTRYPOINT [ "ossutil help" ]
+ENTRYPOINT [ "ossutil" ]
