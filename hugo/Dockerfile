@@ -12,6 +12,7 @@ USER homebrew
 
 RUN set -x \
       && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" \
-      && echo "eval \$(/home/homebrew/.linuxbrew/bin/brew shellenv)" >>~/.bash_profile
+      && echo "eval \$(/home/homebrew/.linuxbrew/bin/brew shellenv)" >>~/.bash_profile \
+      && source ~/.bash_profile
 
-ENTRYPOINT [ "bash -c" ]
+ENTRYPOINT [ "bash" ]
