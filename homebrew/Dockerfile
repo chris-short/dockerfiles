@@ -6,11 +6,11 @@ RUN set -x \
       && microdnf install -y ca-certificates curl file gzip git libtool patch tar which \
       && microdnf clean all \
       && rm -rf /var/cache/yum \
-      && useradd --no-log-init -G wheel homebrew
+      && useradd --no-log-init -G wheel linuxbrew
 
-USER homebrew
+USER linuxbrew
 
 RUN set -x \
       && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
-ENTRYPOINT [ "/home/homebrew/.linuxbrew/bin/brew" ]
+ENTRYPOINT [ "/home/linuxbrew/.linuxbrew/bin/brew" ]
