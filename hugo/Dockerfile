@@ -6,6 +6,12 @@ RUN set -x \
       && microdnf install -y ca-certificates curl tar gzip git file libtool \ 
       which sudo \
       && microdnf clean all \
-      && rm -rf /var/cache/yum
+      && rm -rf /var/cache/yum \
+      && useradd --no-log-init -G wheel homebrew
+
+USER homebrew
+
+RUN set -x \
+      && curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh
 
 ENTRYPOINT [ "bash" ]
