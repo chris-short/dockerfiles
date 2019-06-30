@@ -11,6 +11,6 @@ RUN set -x \
 USER homebrew
 
 RUN set -x \
-      && sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+      && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 ENTRYPOINT [ "bash" ]
