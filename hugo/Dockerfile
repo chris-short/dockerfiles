@@ -3,7 +3,7 @@ LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN set -x \
       && microdnf update -y \
-      && microdnf install -y ca-certificates curl \
+      && microdnf install -y ca-certificates curl tar \
       && microdnf clean all \
       && rm -rf /var/cache/yum
 
