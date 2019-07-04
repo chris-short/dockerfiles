@@ -6,6 +6,7 @@ RUN set -x \
       && apk upgrade \
       && apk add --no-cache git ca-certificates
 
+ARG  WORKDIR="/site"
 WORKDIR ${WORKDIR}
 VOLUME  ${WORKDIR}
 EXPOSE  1313
