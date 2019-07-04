@@ -6,4 +6,8 @@ RUN set -x \
       && apk upgrade \
       && apk add --no-cache git ca-certificates
 
-ENTRYPOINT ["hugo"]
+WORKDIR ${WORKDIR}
+VOLUME  ${WORKDIR}
+EXPOSE  1313
+ENTRYPOINT [ "/hugo" ]
+CMD [ "--help" ]
