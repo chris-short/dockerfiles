@@ -3,6 +3,4 @@ LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN npm install -g firebase-tools
 
-ENTRYPOINT [ "firebase" ]
-
-CMD [ "--help" ]
+CMD [ "firebase" ]
