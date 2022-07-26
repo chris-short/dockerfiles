@@ -1,10 +1,10 @@
-FROM alpine:latest
+FROM amazonlinux:2022
 
 LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
 RUN set -x \
-        && apk update \
-        && apk upgrade \
+        && dnf update \
+        && dnf upgrade \
         && apk add --no-cache curl ca-certificates
 
 ENTRYPOINT [ "/bin/sh", "-c" ]
