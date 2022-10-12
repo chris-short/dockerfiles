@@ -7,7 +7,7 @@ Failing attempt at doing some linting in Markdown in CI
 
 ## bfg
 
-When you absolutely, positively need to use [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) in a container
+When you absolutely, positively need to use [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) in a container, accept no substitute.
 
 ## doctl
 
@@ -15,7 +15,7 @@ Container for DigitalOcean's CLI tool. Handy for CI.
 
 ## curltainer
 
-Fire off a curl on container execution. Handy for things like GitLab CI cron jobs or mucking with APIs
+Fire off a curl on container execution. Handy for things like CI/CD pipelines and cron jobs or general mucking with APIs
 
 ## docker-centos7-percona-toolkit
 

@@ -1,12 +1,11 @@
-FROM centos:7
+FROM public.ecr.aws/docker/library/fedora:latest
 
-MAINTAINER Chris Short <chris@chrisshort.net>
+LABEL maintainer="Chris Short <chris@chrisshort.net>"
 
-ENV BFG_VER 1.13.0
-
-RUN yum -y install java git curl
+ENV BFG_VER 1.14.0
 
 RUN yum -y update \
+	&& yum -y install java git curl \
 	&& yum clean all
 
 RUN curl -o bfg.jar http://repo1.maven.org/maven2/com/madgag/bfg/${BFG_VER}/bfg-${BFG_VER}.jar \
