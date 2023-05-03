@@ -1,0 +1,25 @@
+services:
+  foldingathome:
+    container_name: foldingathome
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities:
+            - gpu
+            device_ids:
+            - '0'
+            - '1'
+            driver: nvidia
+    environment:
+      PGID: '1000'
+      PUID: '1000'
+      TZ: Etc/UTC
+    image: lscr.io/linuxserver/foldingathome:latest
+    ports:
+    - published: 7396
+      target: 7396
+    restart: unless-stopped
+    volumes:
+    - /Container/fah:/config:rw
+version: '2.1'
